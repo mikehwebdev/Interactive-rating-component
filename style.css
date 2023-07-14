@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    font-family: 'Overpass', sans-serif;
+
 }
 
 body {
-    background-color: hsl(216, 12%, 8%);
+    background-color: hsl(218, 11%, 8%);
     display: grid;
     place-items: center;
     justify-items: center;
@@ -14,33 +16,46 @@ body {
 #screen-one {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 300px;
-    background-color: hsl(213, 19%, 18%);
-    width: 325px;
+    height: 360px;
+    background-image: linear-gradient(to bottom, hsl(215,20%,17%), hsl(215,24%,12%) );   
+    width: 327px;
+    padding: 0 24px;
+    border-radius: 15px;
+}
+
+.star {
+    margin-top: 24px;
 }
 
 .circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2rem;
-    height: 2rem;
-    background-color: hsl(216, 12%, 54%);
+    width: 40px;
+    height: 40px;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 54%);
     border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-
-
 .question-title {
-    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(0, 100%, 100%);
+    margin-top: 16px;
 }
 
 .question-text {
-    color: hsl(217, 12%, 63%);
+    color: hsl(216, 12%, 63%);
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 17px;
 }
 
 #buttons-container {
+    margin-top: 24px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -48,26 +63,70 @@ body {
 
 .submit-btn {
     background-color: hsl(25, 97%, 53%);
-    color: white;
     border: none;
-    width: 80%;
     padding: 1rem 0;
     border-radius: 25px;
+    margin-top: 24px;
+    color: hsl(0,0%,100%);
+    text-transform: uppercase;
+    letter-spacing: 1.87px;
 }
 
 .selected {
     background-color: hsl(217, 12%, 63%);
-    color: white;
+    color: hsl(0,0%,100%);
+    
 }
 
 #screen-two {
     display: none;
     flex-direction: column;
-    justify-content: space-around;
-    height: 300px;
-    background-color: hsl(213, 19%, 18%);
-    width: 325px;
+    align-items: center;
+    text-align: center;
+    height: 360px;
+    background-image: linear-gradient(to bottom, hsl(215,20%,17%), hsl(215,24%,12%) );   
+    width: 327px;
     color: white;
+    border-radius: 15px;
+    padding: 0 24px;
+    
+}
+
+.thanks-image {
+    width: 144px;
+    align-self: center;
+    margin-top: 34px;
+}
+
+.score-confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 32px;
+    font-size: 14px;
+    color: hsl(24, 97%, 53%);
+    margin-top: 24px;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 22.5px;
+    text-align: center;
+}
+
+.score-confirmation > p {
+    margin-bottom: 7px;
+}
+
+h2 {
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.feedback-text {
+    margin-top: 17px;
+    color: hsl(213,12%, 63%);
+    line-height: 22px;
+    font-size: 14px;
 }
 
 @media (min-width: 600px) {
@@ -81,5 +140,9 @@ body {
         background-color: white;
         color: hsl(25, 97%, 53%);
         cursor: pointer;
+    }
+
+    #screen-one {
+        
     }
 }

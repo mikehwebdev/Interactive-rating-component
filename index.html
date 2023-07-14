@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/img/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Rating Component</title>
   </head>
   <body>
     <section id="screen-one" >
-      <div class="circle">
+      <div class="circle star">
         <img src="img/icon-star.svg" alt="Star icon">
       </div>
       <h1 class="question-title">How did we do?</h1>
@@ -24,8 +27,8 @@
       <button class="submit-btn">Submit</button>
     </section>
     <section id="screen-two">
-      <img src="img/illustration-thank-you.svg" alt="Thank you">
-      <p class="feedback-text"> You selected <span id="feedback-score"></span> out of 5</p>
+      <img class="thanks-image" src="img/illustration-thank-you.svg" alt="Thank you">
+      <div class="score-confirmation"><span id="feedback-score"></span></div>
       <h2>Thank you!</h2>
       <p class="feedback-text">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
     </section>  

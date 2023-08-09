@@ -191,8 +191,8 @@ h2 {
 @media (min-width: 500px) {
    
     #screen-one {
-        width: 29.428rem;
-        height: 29.714rem;
+        width: 29.42857rem;
+        height: 29.714285rem;
         border-radius: 30px;
         grid-template-rows: 2.285rem 3.4285rem 2.1428rem 3.0714rem 0.5rem 5.14285rem 1.714rem 3.6428rem 2.2857rem 3.214rem 2.285rem;
         grid-template-columns: 2.28rem 14.21rem 10.07rem 2.857rem;

@@ -22,7 +22,7 @@ buttonContainer.addEventListener('click', (e)=>{
 submitButton.addEventListener('click', ()=>{
     if (score !== 0) {
     screenOne.style.display = 'none'
-    screenTwo.style.display = 'flex'
+    screenTwo.style.display = 'grid'
     }
 })
 

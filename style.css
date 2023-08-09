@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     font-family: 'Overpass', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 body {
@@ -10,180 +13,231 @@ body {
     place-items: center;
     justify-items: center;
     min-height: 100vh;
+    caret-color: transparent;
 }
 
 #screen-one {
-    display: flex;
-    flex-direction: column;
-    height: 360px;
+    height: 25.714rem;
     background-image: radial-gradient(98.96% 98.96% at 50% 0%, hsl(215,20%,17%), hsl(215,24%,12%) );   
-    width: 327px;
-    padding: 0 24px;
+    width: 23.357rem;
     border-radius: 15px;
+    display: grid;
+    grid-template-rows: 1.714rem 2.857rem 1.142rem 2.642rem 0.714rem 4.714rem 1.714rem 3rem 1.714rem 3.214rem 2.285rem;
+    grid-template-columns: 1.714rem 3rem 17.071rem 1.714rem;
+    grid-template-areas: 
+    ". . . ."
+    ". star  . ."
+    ". . . ."
+    ". question question  ."
+    ". . . ."
+    ". text text  ."
+    ". . . ."
+    ". buttons buttons ."
+    ". . . ."
+    ". submit submit  ."
+    ". . . ."
 }
 
 .star {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 2.857rem;
+    height: 2.857rem;
     background-color: hsla(213, 19%, 18%, 100%);
     color: hsl(217, 12%, 54%);
     border-radius: 50%;
-    font-size: 14px;
-    font-weight: 700;
+    grid-area: star;
+    display: grid;
+    place-items: center;
+    justify-items: center;
 }
 
 .star > img {
-    width: 14px;
-    height: 14px;
+    width: 1rem;
+    height: 1rem;
 }
 
 .question-title {
-    font-size: 24px;
+    font-size: 1.714rem;
     font-weight: 700;
     color: hsl(0, 100%, 100%);
-    margin-top: 20px;
+    grid-area: question;
 }
 
 .question-text {
-    color: hsl(216, 12%, 63%);
-    font-size: 14px;
-    line-height: 22px;
-    margin-top: 12px;
+    color: #969FAD;
+    font-size: 1rem;
+    line-height: 157.143%;
+    grid-area: text;
 }
 
 #buttons-container {
-    margin-top: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    grid-area: buttons;
+    display: grid;
+    grid-template-rows: 3.214rem;
+    grid-template-columns: 3rem 1.214rem 3rem 1.214rem 3rem 1.214rem 3rem 1.214rem 3rem;
+    grid-template-areas: "btn-1 . btn-2 . btn-3 . btn-4 . btn-5";
+}
+
+.btn-1 {
+    grid-area: btn-1;
+}
+
+.btn-2 {
+    grid-area: btn-2;
+}
+
+.btn-3 {
+    grid-area: btn-3;
+}
+
+.btn-4 {
+    grid-area: btn-4;
+}
+
+.btn-5 {
+    grid-area: btn-5;
 }
 
 .score-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;
-    background-color: hsl(213, 19%, 18%);
-    color: hsl(217, 12%, 54%);
+    width: 3rem;
+    height: 3rem;
+    background-color: #262E38;
+    color: #7C8798;
     border-radius: 50%;
-    font-size: 14px;
-    line-height: 24px;
-    font-style: normal;
+    line-height: 171.429%;
     font-weight: 700;
     letter-spacing: 0.175px;
-    padding-top: 3px;
+    display: grid;
+    place-items: center;
+    justify-items: center;
 }
 
 .submit-btn {
     background-color: hsl(25, 97%, 53%);
     border: none;
-    padding: 1rem 0;
     border-radius: 25px;
-    margin-top: 24px;
+    font-weight: 700;
     color: hsl(0,0%,100%);
     text-transform: uppercase;
     letter-spacing: 1.867px;
-    width: 279px;
-    height: 45px;
-    font-size: 14px;
+    grid-area: submit;
 }
 
 .selected {
-    background-color: hsl(217, 12%, 63%);
+    background-color:  #7C8798;
     color: hsl(0,0%,100%);
 }
 
 #screen-two {
     display: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 360px;
-    background-image: linear-gradient(to bottom, hsl(215,20%,17%), hsl(215,24%,12%) );   
-    width: 327px;
+    height: 25.714rem;
+    background-image: radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%);
+    width: 23.357rem;
     color: white;
     border-radius: 15px;
-    padding: 0 24px;
+    grid-template-columns: 1.714rem 4rem 0.857rem 10.285rem 0.857rem 4rem 1.714rem;
+    grid-template-rows: 2.428rem 6.857rem 1.714rem 2.285rem 1.714rem 2.642rem 0.714rem 4.714rem 2.642rem;
+
+    grid-template-areas: 
+    ". . . . . . ."
+    ". . . img . . ."
+    ". . . . . . ."
+    ". .  confirmation confirmation confirmation . .  "
+    ". . . . . . ."
+    ". . . thanks . . ."
+    ". . . . . . ."
+    ". text text text text text."
+    ". . . . . . ."
+    ;
 }
 
 .thanks-image {
-    width: 144px;
-    align-self: center;
-    margin-top: 34px;
+    width: 10.285rem;
+    grid-area: img;
 }
 
 .score-confirmation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 168px;
-    height: 32px;
-    font-size: 14px;
+    width: 12rem;
+    height: 2.285rem;
     color: hsl(25, 97%, 53%);
-    margin-top: 24px;
     background-color: hsl(213, 19%, 18%);
     border-radius: 22.5px;
-    text-align: center;
+    line-height:  157.143%;
+    grid-area: confirmation;
+    padding-top: 4px;
+    display: grid;
+    place-items: center;
+    justify-items: center;
 }
 
 h2 {
-    margin-top: 32px;
-    font-size: 24px;
+    font-size: 1.714rem;
     font-weight: 700;
-    font-style: normal;
+    grid-area: thanks;
+    padding-top: 2px;
+    display: grid;
+    place-items: center;
+    justify-items: center;
 }
 
 .feedback-text {
-    margin-top: 17px;
     color: hsl(213,12%, 63%);
-    line-height: 22px;
-    font-size: 14px;
+    line-height: 157.143%;
+    grid-area: text;
+    text-align: center;
 }
+
+
 
 @media (min-width: 500px) {
    
     #screen-one {
-        width: 412px;
-        height: 416px;
-        padding: 0 39px 0 32px;
+        width: 29.428rem;
+        height: 29.714rem;
         border-radius: 30px;
+        grid-template-rows: 2.28rem 3.428rem 2.1428rem 3.071rem 0.5rem 5.142rem 1.714rem 2.285rem 3.214rem 2.285rem;
+        grid-template-columns: 2.28rem 14.21rem 10.07rem 2.857rem;
+        grid-template-areas: 
+        ". . . ."
+        ". star . ."
+        ". . . ."
+        ". question  ."
+        ". . . ."
+        ". text text ."
+        ". . . ."
+        ". buttons buttons ."
+        ". . . ."
+        ". submit submit ."
+        ". . . ."
+        ;
     }
 
     .star {
-        margin-top: 32px;
-        width: 48px;
-        height: 48px;
+        width: 3.428rem;
+        height: 3.428rem;
     }
 
     .question-title {
-        margin-top: 34px;
-        font-size: 28px;
-        font-style: normal;
+        font-size: 2rem;
         font-weight: 700;
-        line-height: normal;
+        padding-top: 6px;
     }
 
+    #feedback-score {
+        font-size: 1.071rem;
+    }
     .question-text {
-        margin-top: 9px;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-    }
-
-    #buttons-container {
-        width: 341px;
+        font-size: 1.07rem;
+        line-height: 160%;
     }
 
     .score-btn {
-        width: 51px;
-        height: 51px;
-        font-size: 16px;
+        width: 3.642rem;
+        height: 3.642rem;
+        font-size: 1.142rem;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0.2px;
+        padding-top: 3px;
     }
 
     .score-btn:hover {
@@ -193,10 +247,10 @@ h2 {
     }
 
     .submit-btn {
-        margin-top: 32px;
-        font-size: 15px;
-        width: 341px;
-        height: 45px;
+        border-radius: 22.5px;
+        font-size: 1.071rem;
+        width: 24.357rem;
+        height: 3.214rem;
     }
 
     .submit-btn:hover {
@@ -205,38 +259,38 @@ h2 {
         cursor: pointer;
     }
 
+    #buttons-container {
+        grid-template-rows: 3.6428rem;
+        grid-template-columns: 3.6428rem 1.5rem 3.6428rem 1.5rem 3.6428rem 1.5rem 3.6428rem 1.5rem 3.6428rem;
+        grid-template-areas: "btn-1 . btn-2 . btn-3 . btn-4 . btn-5";
+    }
+
     #screen-two {
-        width: 412px;
-        height: 416px;
-        padding: 0 40px 0 32px;
+        width: 29.428rem;
+        height: 29.714rem;
         border-radius: 30px;
+        grid-template-rows: 3.214rem 7.714rem 2.571rem 2.285rem 2.285rem 3.071rem .5rem 5.1428rem 3.214rem;
+        grid-template-columns: 2.2857rem 5.571rem .785rem 11.57rem 1.428rem 4.9285rem 2.857rem;
     }
 
     .thanks-image {
-        margin-top: 45px;
-        width: 162px;
+        width: 11.57rem;
     }
 
     .score-confirmation {
-        margin-top: 32px;
-        font-size: 15px;
-        width: 193px;
-        height: 32px;
-        line-height: 24px;
-        text-align: center;
+        font-size: 1.0714rem;
+        width: 13.785rem;
+        height: 2.285rem;
+        line-height: 160%;
     }
 
     h2 {
-        font-size: 28px;
-        font-style: normal;
+        font-size: 2rem;
         font-weight: 700;
-        line-height: normal;
-        margin-top: 36px;
     }
 
     .feedback-text {
-        margin-top: 9px;
-        font-size: 15px;
-        line-height: 24px;
+        font-size: 1.0714rem;
+        line-height: 160%;
     }
 }
